@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #070B14;
+    --bg-secondary: #0B132B;
+    --bg-tertiary: #0E1A38;
+    --accent-cyan: #00F0FF;
+    --accent-violet: #8B5CF6;
+    --accent-blue: #38BDF8;
+  }
+
+  body {
+    background-color: #070B14;
+    color: #F1F5F9;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar for cyber dark enterprise UI */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #070B14;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E293B;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00F0FF44;
+  }
+}
+
+/* Glassmorphism and glow utilities */
+.glass-panel {
+  background: rgba(11, 19, 43, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 25px -5px rgba(0, 240, 255, 0.2);
+}
+
+.glass-card-violet {
+  background: rgba(14, 26, 56, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.glass-card-violet:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.25);
+}
+
+.glow-cyan-text {
+  text-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+}
+
+.glow-violet-text {
+  text-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+}
+
+/* React Flow styling overrides for cyber dark theme */
+.react-flow__attribution {
+  display: none !important;
+}
+
+.react-flow__controls {
+  background: #0B132B !important;
+  border: 1px solid rgba(56, 189, 248, 0.2) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: #0B132B !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2) !important;
+  fill: #38BDF8 !important;
+}
+
+.react-flow__controls-button:hover {
+  background: #14224A !important;
+  fill: #00F0FF !important;
+}
+
+.react-flow__edge-path {
+  stroke: #38BDF8;
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #00F0FF;
+  stroke-width: 3;
+  filter: drop-shadow(0 0 6px #00F0FF);
+}
